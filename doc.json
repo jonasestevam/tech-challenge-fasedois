@@ -1,0 +1,925 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "OpenAPI definition",
+        "version": "v0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8080/api",
+            "description": "Generated server url"
+        }
+    ],
+    "paths": {
+        "/person": {
+            "get": {
+                "tags": [
+                    "person-controller"
+                ],
+                "summary": "Get all persons",
+                "operationId": "getAll",
+                "responses": {
+                    "200": {
+                        "description": "Returns all persons",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PersonDTO"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Returns the error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDTO"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "person-controller"
+                ],
+                "summary": "Update a person",
+                "operationId": "update",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PersonDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Returns the update person",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PersonDTO"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Returns the error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDTO"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "person-controller"
+                ],
+                "summary": "Create a person",
+                "operationId": "save",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PersonDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Returns the created person",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PersonDTO"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Returns the error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDTO"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/homeappliance": {
+            "get": {
+                "tags": [
+                    "home-appliance-controller"
+                ],
+                "summary": "Get all the home appliances",
+                "operationId": "getAll_1",
+                "responses": {
+                    "200": {
+                        "description": "Returns all the home appliance",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HomeApplianceDTO"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Returns the error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDTO"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "home-appliance-controller"
+                ],
+                "summary": "Update a home appliance",
+                "operationId": "update_1",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/HomeApplianceDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Returns the update home appliance",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HomeApplianceDTO"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Returns the error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDTO"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "home-appliance-controller"
+                ],
+                "summary": "Create a home appliance",
+                "operationId": "save_1",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/HomeApplianceDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Returns the created home appliance",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HomeApplianceDTO"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Returns the error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDTO"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/address": {
+            "get": {
+                "tags": [
+                    "addres-controller"
+                ],
+                "summary": "Get all the addresses",
+                "operationId": "getAll_2",
+                "responses": {
+                    "200": {
+                        "description": "Returns all the addresses",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Returns the error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDTO"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "addres-controller"
+                ],
+                "summary": "Update an address",
+                "operationId": "update_2",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AddressDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Returns the updated address",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AddressDTO"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Returns the error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDTO"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "addres-controller"
+                ],
+                "summary": "Create an address",
+                "operationId": "save_2",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AddressDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "201": {
+                        "description": "Returns the created address",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AddressDTO"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Returns the error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDTO"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/person/{id}": {
+            "get": {
+                "tags": [
+                    "person-controller"
+                ],
+                "summary": "Gets a person by ID",
+                "operationId": "getById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Returns the person",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PersonDTO"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Returns the error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDTO"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "person-controller"
+                ],
+                "summary": "Deletes a person by ID",
+                "operationId": "delete",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Empty return",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PersonDTO"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Returns the error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDTO"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/person/filter": {
+            "get": {
+                "tags": [
+                    "person-controller"
+                ],
+                "summary": "Get filtered persons",
+                "operationId": "getFiltered",
+                "parameters": [
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/PersonFilterDTO"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Returns filtered persons",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PersonDTO"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Returns the error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDTO"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/homeappliance/{id}": {
+            "get": {
+                "tags": [
+                    "home-appliance-controller"
+                ],
+                "summary": "Gets a home appliance by ID",
+                "operationId": "getByID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Returns the home appliance",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HomeApplianceDTO"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Returns the error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDTO"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "home-appliance-controller"
+                ],
+                "summary": "Deletes a home appliance by ID",
+                "operationId": "delete_1",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Empty return",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HomeApplianceDTO"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Returns the error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDTO"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/homeappliance/filter": {
+            "get": {
+                "tags": [
+                    "home-appliance-controller"
+                ],
+                "summary": "Get the filtered home appliances",
+                "operationId": "getFiltered_1",
+                "parameters": [
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/HomeApplianceFilterDTO"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Returns the filtered home appliances",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HomeApplianceDTO"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Returns the error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDTO"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/address/{id}": {
+            "get": {
+                "tags": [
+                    "addres-controller"
+                ],
+                "summary": "Gets an address by ID",
+                "operationId": "getById_1",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Returns the address",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AddressDTO"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Returns the error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDTO"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "addres-controller"
+                ],
+                "summary": "Deletes an address by ID",
+                "operationId": "delete_2",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Empty return",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Returns the error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDTO"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/address/filter": {
+            "get": {
+                "tags": [
+                    "addres-controller"
+                ],
+                "summary": "Get the filtered addresses",
+                "operationId": "getFiltered_2",
+                "parameters": [
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/AddressFilterDTO"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Returns the filtered addresses",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Returns the error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorDTO"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "ErrorDTO": {
+                "type": "object",
+                "properties": {
+                    "errorMessage": {
+                        "type": "string"
+                    },
+                    "exception": {
+                        "type": "string"
+                    }
+                }
+            },
+            "AddressDTO": {
+                "required": [
+                    "city",
+                    "neighborhood",
+                    "number",
+                    "state",
+                    "streetName"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "streetName": {
+                        "type": "string"
+                    },
+                    "neighborhood": {
+                        "type": "string"
+                    },
+                    "city": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "type": "string"
+                    },
+                    "number": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                }
+            },
+            "PersonDTO": {
+                "required": [
+                    "birthDate",
+                    "email",
+                    "name",
+                    "phoneNumber"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "phoneNumber": {
+                        "type": "string"
+                    },
+                    "gender": {
+                        "type": "string"
+                    },
+                    "birthDate": {
+                        "type": "string",
+                        "format": "date"
+                    },
+                    "parent": {
+                        "$ref": "#/components/schemas/PersonDTO"
+                    },
+                    "addresses": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/AddressDTO"
+                        }
+                    }
+                }
+            },
+            "HomeApplianceDTO": {
+                "required": [
+                    "brand",
+                    "description",
+                    "model",
+                    "name",
+                    "powerInWatts",
+                    "type",
+                    "voltage"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "BLENDER",
+                            "AIR_CONDITIONER",
+                            "VACUUM_CLEANER",
+                            "MICROWAVE",
+                            "STOVE",
+                            "WASHING_MACHINE",
+                            "TV",
+                            "REFRIGERATOR",
+                            "ELECTRIC_COOKER",
+                            "TOASTER",
+                            "COFFEE_MAKER"
+                        ]
+                    },
+                    "brand": {
+                        "type": "string"
+                    },
+                    "powerInWatts": {
+                        "type": "string"
+                    },
+                    "voltage": {
+                        "type": "string"
+                    },
+                    "model": {
+                        "type": "string"
+                    },
+                    "owner": {
+                        "$ref": "#/components/schemas/PersonDTO"
+                    }
+                }
+            },
+            "PersonFilterDTO": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "phoneNumber": {
+                        "type": "string"
+                    },
+                    "gender": {
+                        "type": "string"
+                    },
+                    "birthDate": {
+                        "type": "string",
+                        "format": "date"
+                    },
+                    "parentEmail": {
+                        "type": "string"
+                    }
+                }
+            },
+            "HomeApplianceFilterDTO": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "BLENDER",
+                            "AIR_CONDITIONER",
+                            "VACUUM_CLEANER",
+                            "MICROWAVE",
+                            "STOVE",
+                            "WASHING_MACHINE",
+                            "TV",
+                            "REFRIGERATOR",
+                            "ELECTRIC_COOKER",
+                            "TOASTER",
+                            "COFFEE_MAKER"
+                        ]
+                    },
+                    "brand": {
+                        "type": "string"
+                    },
+                    "powerInWatts": {
+                        "type": "string"
+                    },
+                    "voltage": {
+                        "type": "string"
+                    },
+                    "model": {
+                        "type": "string"
+                    }
+                }
+            },
+            "AddressFilterDTO": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "streetName": {
+                        "type": "string"
+                    },
+                    "neighborhood": {
+                        "type": "string"
+                    },
+                    "city": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
